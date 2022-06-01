@@ -1,0 +1,74 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  margin-left: 30px;
+}
+
+.random-colors {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: auto;
+
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  font-family: Comic Sans Ms;
+  font-size: 80px;
+}
+
+.color-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  margin-top: 80px;
+}
+
+figure {
+  height: 150px;
+  width: 150px;
+  border-style: solid;
+  margin: 15px;
+  text-align: center;
+  align-items: ;
+}
+
+text {
+  align-self: end;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-top: 75px;
+}
+
+.saved-palettes {
+  width: 30%;
+  height: auto;
+  margin-left: 30px;
+  border: 3px;
+  border-color: #000000;
+  border-left-style: solid;
+
+}
+
+h3 {
+  text-align: center;
+  margin-top: 80px;
+  font-family: Comic Sans Ms;
+  font-size: 30px;
+}
