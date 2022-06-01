@@ -35,26 +35,10 @@ h1 {
   margin-top: 80px;
 }
 
-
- .box:nth-child(1) {
-  background-color: #24680A;
+.box {
+  background-color: #000000;
 }
 
-.box:nth-child(2) {
-  background-color: #13579B;
-}
-
-.box:nth-child(3) {
-  background-color: #ABCDEF;
-}
-
-.box:nth-child(4) {
-  background-color: #098765;
-}
-
-.box:nth-child(5) {
-  background-color: #111111;
-}
 
 figure {
   height: 150px;
