@@ -36,17 +36,23 @@ h1 {
   margin-top: 80px;
 }
 
+
 figure {
   height: 150px;
   width: 150px;
   border-style: solid;
   margin: 15px;
   text-align: center;
-  align-items: ;
 }
 
-text {
-  align-self: end;
+img {
+  width: 25px;
+  height: 25px;
+  margin-top: 160px;
+}
+
+.box:nth-child(1) {
+  background-color: #000000;
 }
 
 .buttons {
