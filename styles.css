@@ -17,7 +17,6 @@ body {
   align-items: center;
   width: 70%;
   height: auto;
-
 }
 
 h1 {
@@ -36,17 +35,38 @@ h1 {
   margin-top: 80px;
 }
 
+/* .box:nth-child(1) {
+  background-color: #24680A;
+}
+
+.box:nth-child(2) {
+  background-color: #13579B;
+}
+
+.box:nth-child(3) {
+  background-color: #ABCDEF;
+}
+
+.box:nth-child(4) {
+  background-color: #098765;
+}
+
+.box:nth-child(5) {
+  background-color: #111111;
+} */
+
 figure {
   height: 150px;
   width: 150px;
   border-style: solid;
   margin: 15px;
   text-align: center;
-  align-items: ;
 }
 
 text {
   align-self: end;
+  font-family: Comic Sans Ms;
+  font-size: 14px;
 }
 
 .buttons {
@@ -63,7 +83,6 @@ text {
   border: 3px;
   border-color: #000000;
   border-left-style: solid;
-
 }
 
 h3 {
@@ -71,4 +90,10 @@ h3 {
   margin-top: 80px;
   font-family: Comic Sans Ms;
   font-size: 30px;
+}
+
+img {
+  width: 15px;
+  height: 15px;
+  margin-top: 160px;
 }
