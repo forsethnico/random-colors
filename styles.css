@@ -36,7 +36,7 @@ h1 {
 }
 
 
-/* .box:nth-child(1) {
+ .box:nth-child(1) {
   background-color: #24680A;
 }
 
@@ -54,7 +54,7 @@ h1 {
 
 .box:nth-child(5) {
   background-color: #111111;
-} 
+}
 
 figure {
   height: 150px;
@@ -97,4 +97,15 @@ img {
   width: 15px;
   height: 15px;
   margin-top: 160px;
+}
+
+button{
+  background-color: #ffffff;
+  font-family: Comic Sans Ms;
+  width: 120px;
+  height: 30px;
+  border-right: solid;
+  border-bottom: solid;
+  padding: 0px;
+  font-size: 14px;
 }
