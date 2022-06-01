@@ -35,6 +35,7 @@ h1 {
   margin-top: 80px;
 }
 
+
 /* .box:nth-child(1) {
   background-color: #24680A;
 }
@@ -53,7 +54,7 @@ h1 {
 
 .box:nth-child(5) {
   background-color: #111111;
-} */
+} 
 
 figure {
   height: 150px;
