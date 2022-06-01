@@ -8,8 +8,8 @@ newPalletBtn.addEventListener('click', randomColorPallet);
 function randomColorPallet() {
   var hex = '#';
   for (var i = 0; i < 6; i++){
-    // var index = Math.floor(Math.random() * hexValues.length)
     hex += hexValues[(Math.floor(Math.random() * 16))];
   }
   return hex;
 }
+randomColorPallet();
