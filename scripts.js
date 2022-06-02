@@ -1,13 +1,26 @@
 var newPaletteBtn = document.querySelector('#new-palette-button');
-var code = document.querySelectorAll('#code')
+var hexCode = document.querySelectorAll('#code')
 var boxes = document.querySelectorAll('.box')
-
 
 var hexValues = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
 
-var color = document.querySelectorAll(".box")
-
+window.addEventListener('load', setPalette);
 newPaletteBtn.addEventListener('click', setPalette);
+
+class Color {
+  constructor() {
+    this.locked = false;
+    this.hexCode = hexCode;
+  }
+}
+
+class Palette {
+  constructor() {
+    this.paletteLength = [];
+    this.id = Date.now();
+  }
+}
+
 
 function randomColor() {
   var hex = '#';
@@ -19,9 +32,8 @@ function randomColor() {
 
 function setPalette() {
   for (var i = 0; i < 5; i++){
-    code[i].innerText = randomColor()
-    boxes[i].style.backgroundColor = code[i].innerText
+    hexCode[i].innerText = randomColor()
+    boxes[i].style.backgroundColor = hexCode[i].innerText
     console.log(boxes)
   }
 }
-setPalette()
