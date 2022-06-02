@@ -1,14 +1,15 @@
 var newPaletteBtn = document.querySelector('#new-palette-button');
+var savePaletteBtn = document.querySelector('#save-palette-button')
 var hexCode = document.querySelectorAll('#code')
 var boxes = document.querySelectorAll('.box')
 var lockIcon = document.querySelectorAll('.icon')
 
-var palette;
-
-var hexValues = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+var currentPalette;
+var savedPalettes = [];
 
 window.addEventListener('load', createPalette);
 newPaletteBtn.addEventListener('click', randomizePalette);
+savePaletteBtn.addEventListener('click', savePalette);
 lockIcon.forEach(function (img) {img.addEventListener('click', toggleLock)})
 
 class Color {
@@ -18,6 +19,7 @@ class Color {
     this.randomColor();
   }
   randomColor() {
+    var hexValues = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
     var hex = '#';
     for (var i = 0; i < 6; i++){
       hex += hexValues[(Math.floor(Math.random() * hexValues.length))];
@@ -43,19 +45,25 @@ class Palette {
 }
 
 function createPalette() {
-  palette = new Palette();
+  currentPalette = new Palette();
   showPalette();
 }
 
 function randomizePalette() {
-  palette.randomizeColors();
+  currentPalette.randomizeColors();
   showPalette();
 }
 
+function savePalette() {
+  savedPalettes.push(currentPalette);
+  console.log(savedPalettes)
+  createPalette();
+}
+
 function showPalette() {
-  for (var i = 0; i < palette.colors.length; i++) {
-    hexCode[i].innerText = palette.colors[i].hexCode
-    boxes[i].style.backgroundColor = palette.colors[i].hexCode
+  for (var i = 0; i < currentPalette.colors.length; i++) {
+    hexCode[i].innerText = currentPalette.colors[i].hexCode
+    boxes[i].style.backgroundColor = currentPalette.colors[i].hexCode
   }
 }
 
