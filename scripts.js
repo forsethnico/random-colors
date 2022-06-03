@@ -58,9 +58,14 @@ function randomizePalette() {
 }
 
 function savePalette() {
+  if (savedPalettes.length < 6) {
   savedPalettes.push(currentPalette);   //<---- Include a lock icon img change
   showSavedPalette()
   createPalette();
+  for (var i=0;i<5;i++){
+    lockIcon[i].src = 'https://cdn-icons-png.flaticon.com/512/102/102288.png'
+}
+}
 }
 
 function showPalette() {
