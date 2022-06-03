@@ -3,6 +3,7 @@ var savePaletteBtn = document.querySelector('#save-palette-button')
 var hexCode = document.querySelectorAll('#code')
 var boxes = document.querySelectorAll('.box')
 var lockIcon = document.querySelectorAll('.icon')
+var savedPaletteSection = document.querySelector(".saved-palettes")
 
 var currentPalette;
 var savedPalettes = [];
@@ -57,6 +58,7 @@ function randomizePalette() {
 function savePalette() {
   savedPalettes.push(currentPalette);   //<---- Include a lock icon img change
   createPalette();
+  showSavedPalette()
 }
 
 function showPalette() {
@@ -72,21 +74,32 @@ function showPalette() {
 
 
 function toggleLockIcon(event) {
-      if (event.target.src === 'https://cdn-icons-png.flaticon.com/512/102/102288.png') {
-        event.target.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/OOjs_UI_icon_lock.svg/768px-OOjs_UI_icon_lock.svg.png'
-        var targetHex = event.target.closest('figure').innerText
-        for (var i = 0; i < 5; i++){
-          if (currentPalette.colors[i].hexCode === targetHex){
-            currentPalette.colors[i].locked = true
-          }
-        }
-        } else {
-          event.target.src = 'https://cdn-icons-png.flaticon.com/512/102/102288.png'
-          var targetHex = event.target.closest('figure').innerText
-          for (var i = 0; i < 5; i++){
-            if (currentPalette.colors[i].hexCode === targetHex){
-              currentPalette.colors[i].locked = false
-            }
+  if (event.target.src === 'https://cdn-icons-png.flaticon.com/512/102/102288.png') {
+    event.target.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/OOjs_UI_icon_lock.svg/768px-OOjs_UI_icon_lock.svg.png'
+    var targetHex = event.target.closest('figure').innerText
+    for (var i = 0; i < 5; i++) {
+      if (currentPalette.colors[i].hexCode === targetHex) {
+        currentPalette.colors[i].locked = true
+      }
+    }
+  } else {
+    event.target.src = 'https://cdn-icons-png.flaticon.com/512/102/102288.png'
+    var targetHex = event.target.closest('figure').innerText
+    for (var i = 0; i < 5; i++) {
+      if (currentPalette.colors[i].hexCode === targetHex) {
+        currentPalette.colors[i].locked = false
+      }
+    }
+  }
 }
+function showSavedPalette() {
+// var displaySaved = savedPaletteSection.innerHTML
+  for(var i = 0; i < savedPalettes.length; i++){
+  savedPaletteSection.innerHTML +=
+  `<figure class="mini-box">${savedPalettes[i]}</figure>
+<figure class="mini-box">${savedPalettes[i]}</figure>
+<figure class="mini-box">${savedPalettes[i]}</figure>
+<figure class="mini-box">${savedPalettes[i]}</figure>
+<figure class="mini-box">${savedPalettes[i]}</figure>`
 }
 }
