@@ -60,7 +60,7 @@ text {
   margin-top: 75px;
 }
 
-.saved-palettes {
+.saved-container {
   width: 40%;
   height: auto;
   margin-left: 30px;
@@ -91,4 +91,11 @@ button{
   border-bottom: solid;
   padding: 0px;
   font-size: 14px;
+}
+.mini-box {
+  height: 10px;
+  width: 10px;
+}
+.saved-palettes{
+  display:flex;
 }
