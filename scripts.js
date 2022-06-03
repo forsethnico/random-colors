@@ -10,7 +10,7 @@ var savedPalettes = [];
 window.addEventListener('load', createPalette);
 newPaletteBtn.addEventListener('click', randomizePalette);
 savePaletteBtn.addEventListener('click', savePalette);
-lockIcon.forEach(function (img) {img.addEventListener('click', toggleLock)})
+lockIcon.forEach(function (img) {img.addEventListener('click', toggleLockIcon)})
 
 class Color {
   constructor() {
@@ -38,8 +38,8 @@ class Palette {
   }
   randomizeColors() {
     for (var i = 0; i < this.colors.length; i++) {
+        if (this.colors[i].locked === false)
     this.colors[i].randomColor();
-    //eventually add locked or unlocked property
     }
   }
 }
@@ -55,8 +55,7 @@ function randomizePalette() {
 }
 
 function savePalette() {
-  savedPalettes.push(currentPalette);
-  console.log(savedPalettes)
+  savedPalettes.push(currentPalette);   //<---- Include a lock icon img change
   createPalette();
 }
 
@@ -67,10 +66,27 @@ function showPalette() {
   }
 }
 
-function toggleLock(event) {
-  if (event.target.src === 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/OOjs_UI_icon_lock.svg/768px-OOjs_UI_icon_lock.svg.png') {
-    event.target.src = 'https://cdn-icons-png.flaticon.com/512/102/102288.png'
-  } else {
-    event.target.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/OOjs_UI_icon_lock.svg/768px-OOjs_UI_icon_lock.svg.png'
-  }
+// can aquire hexcode of targeted lock icon click
+// compare aquired hexcode to the hexcodes(property) of all Colors(object) in the currentPalette(object)
+
+
+
+function toggleLockIcon(event) {
+      if (event.target.src === 'https://cdn-icons-png.flaticon.com/512/102/102288.png') {
+        event.target.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/OOjs_UI_icon_lock.svg/768px-OOjs_UI_icon_lock.svg.png'
+        var targetHex = event.target.closest('figure').innerText
+        for (var i = 0; i < 5; i++){
+          if (currentPalette.colors[i].hexCode === targetHex){
+            currentPalette.colors[i].locked = true
+          }
+        }
+        } else {
+          event.target.src = 'https://cdn-icons-png.flaticon.com/512/102/102288.png'
+          var targetHex = event.target.closest('figure').innerText
+          for (var i = 0; i < 5; i++){
+            if (currentPalette.colors[i].hexCode === targetHex){
+              currentPalette.colors[i].locked = false
+            }
+}
+}
 }
