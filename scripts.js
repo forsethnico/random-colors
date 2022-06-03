@@ -11,7 +11,9 @@ var savedPalettes = [];
 window.addEventListener('load', createPalette);
 newPaletteBtn.addEventListener('click', randomizePalette);
 savePaletteBtn.addEventListener('click', savePalette);
-lockIcon.forEach(function (img) {img.addEventListener('click', toggleLockIcon)})
+
+lockIcon.forEach(function (img) {
+  img.addEventListener('click', toggleLockIcon)})
 
 class Color {
   constructor() {
@@ -57,8 +59,8 @@ function randomizePalette() {
 
 function savePalette() {
   savedPalettes.push(currentPalette);   //<---- Include a lock icon img change
-  createPalette();
   showSavedPalette()
+  createPalette();
 }
 
 function showPalette() {
@@ -93,13 +95,12 @@ function toggleLockIcon(event) {
   }
 }
 function showSavedPalette() {
-// var displaySaved = savedPaletteSection.innerHTML
-  for(var i = 0; i < savedPalettes.length; i++){
   savedPaletteSection.innerHTML +=
-  `<figure class="mini-box">${savedPalettes[i]}</figure>
-<figure class="mini-box">${savedPalettes[i]}</figure>
-<figure class="mini-box">${savedPalettes[i]}</figure>
-<figure class="mini-box">${savedPalettes[i]}</figure>
-<figure class="mini-box">${savedPalettes[i]}</figure>`
-}
+  `<section class="saved-row">
+    <figure class="mini-box" style="background-color: ${currentPalette.colors[0].hexCode}"></figure>
+    <figure class="mini-box" style="background-color: ${currentPalette.colors[1].hexCode}"></figure>
+    <figure class="mini-box" style="background-color: ${currentPalette.colors[2].hexCode}"></figure>
+    <figure class="mini-box" style="background-color: ${currentPalette.colors[3].hexCode}"></figure>
+    <figure class="mini-box" style="background-color: ${currentPalette.colors[4].hexCode}"></figure>
+    <img class="trash-can"></img></section>`
 }
