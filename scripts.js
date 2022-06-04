@@ -65,7 +65,7 @@ function randomizePalette() {
 
 function savePalette() {
   if (savedPalettes.length < 6) {
-    savedPalettes.push(currentPalette); //<---- Include a lock icon img change
+    savedPalettes.push(currentPalette);
     showSavedPalette()
     createPalette();
     for (var i = 0; i < 5; i++) {
@@ -81,8 +81,6 @@ function showPalette() {
   }
 }
 
-// can aquire hexcode of targeted lock icon click
-// compare aquired hexcode to the hexcodes(property) of all Colors(object) in the currentPalette(object)
 
 
 
@@ -117,20 +115,11 @@ function showSavedPalette() {
     <img class="trash-can" src = "./assets/trash-can.png"></img></section>`
 }
 
-//
-// function findMiniBox() {
-//   var miniBox = document.querySelectorAll(".saved-row")
-//   for (var i = 0; i < miniBox.length; i++) {
-//     miniBox[i].addEventListener("click", deletePalette)
-//   }
-//   console.log("im working")
-// }
 
-function deletePalette(event){
-  if(event.target.classList.contains("trash-can")){
+function deletePalette(event) {
+  if (event.target.classList.contains("trash-can")) {
     event.target.closest("section").remove();
   }
-  // showSavedPalette()
 }
 savedPaletteSection.addEventListener("click", function(event) {
   deletePalette(event);
