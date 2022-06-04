@@ -64,7 +64,7 @@ function randomizePalette() {
 }
 
 function savePalette() {
-  if (savedPalettes.length < 6) {
+  // if (savedPalettes.length < ) {
     savedPalettes.push(currentPalette);
     showSavedPalette()
     createPalette();
@@ -72,7 +72,7 @@ function savePalette() {
       lockIcon[i].src = 'https://cdn-icons-png.flaticon.com/512/102/102288.png'
     }
   }
-}
+
 
 function showPalette() {
   for (var i = 0; i < currentPalette.colors.length; i++) {
