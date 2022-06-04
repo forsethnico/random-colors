@@ -9,9 +9,9 @@
   - [Organizational Resources](#organizational-resources)
   - [Sources](#sources)
   - [Contributors](#contributors)
-  - [Project Specs](#project-specs)
+  
 ## Introduction
-  - The purpose of this project was to allow students to practice some of the foundational concepts learned so far within the module. There are other extensions that test different skills that we can build on. The project allowed us to personalize/entertain different ideas with HTML/CSS as well as the functionality(JavaScript) behind the web page created.
+  - We built a site that generates color palettes for us. Similar to other sites like Coolors, we present users with various random colors which they can choose to “save” (note: saved palettes will not persist across page refreshes) and be added to the Saved Palettes section to the right side of the page showing only the 5 palette colors. Users can also “lock” a color by clicking the lock/unlock icon next to the hex code for the color, which will keep that color when a new palette is generated. Users can also delete saved palettes they no longer wish to keep by clicking the trash can icon next to the specified palette. This project will give our team an opportunity to write HTML and CSS, and leverage JavaScript to both create our data model and interact with the DOM. It will also give our team an opportunity to practice Git workflow in a collaborative nature since this is our first group project. 
 ## Technologies
   - Javascript
   - HTML
@@ -21,7 +21,7 @@
 ## Features
 - Added a scroll feature to allow the user to save as many palettes as they wish in the Saved Palettes section.
 ## Deployed Page
-Visit our published Hang In There Site! [here](https://forsethnico.github.io/random-colors/)
+Visit our published ColoRandom site! [here](https://forsethnico.github.io/random-colors/)
 ## Possible Future Extensions
   - Ensure all saved palettes are unique and allow the user to add a name to each saved palette.
   - Research hex codes to figure out how to programmatically generate random palettes that are cohesive and pleasant as currently it is generating colors completely at random. 
@@ -46,4 +46,3 @@ Have all team members clone down the repo.
   - [Hunter Monroe](https://github.com/Hmonroe2)
   - [Nick Liggett](https://github.com/NickLiggett)
   - [Nicole Forseth](https://github.com/forsethnico)
-## Project Specs
