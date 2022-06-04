@@ -7,6 +7,7 @@ var savedPaletteSection = document.querySelector(".saved-palettes")
 
 
 
+
 var currentPalette;
 var savedPalettes = [];
 
@@ -126,9 +127,11 @@ function showSavedPalette() {
 // }
 
 function deletePalette(event){
-  if(event.target.classList.contains(".trash-can")){
+  if(event.target.classList.contains("trash-can")){
     event.target.closest("section").remove();
-    console.log("im working");
   }
   // showSavedPalette()
 }
+savedPaletteSection.addEventListener("click", function(event) {
+  deletePalette(event);
+});

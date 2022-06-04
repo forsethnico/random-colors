@@ -9,6 +9,11 @@ body {
   width: 100%;
   margin: 0px;
   margin-left: 30px;
+  /* background-image: url("backgroundimage.jpg"); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 .random-colors {
@@ -22,8 +27,15 @@ body {
 h1 {
   text-align: center;
   margin-top: 50px;
-  font-family: Comic Sans Ms;
-  font-size: 80px;
+  font-family: Chalkduster, fantasy;
+  background-size: 100%;
+  font-weight: 100;
+  font-size: 100px;
+  /* text-shadow: 42px 6px 8px grey; */
+  /* color: linear-gradient(45deg, #f3ec78, #af4261); */
+  background: -webkit-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .color-boxes {
@@ -36,6 +48,7 @@ h1 {
 
 .box {
   background-color: #000000;
+  box-shadow: 4px 2px #888888;
 }
 
 
@@ -49,8 +62,8 @@ figure {
 
 text {
   align-self: end;
-  font-family: Comic Sans Ms;
-  font-size: 14px;
+  font-family: OCR A Std, monospace;
+  font-size: 18px;
 }
 
 .buttons {
@@ -58,10 +71,22 @@ text {
   justify-content: space-around;
   width: 50%;
   margin-top: 75px;
+
+}
+button:hover {
+/* color: #000000;
+border: #000000 solid 1px;
+background: #FFFFFF; */
+
+color: #ffffff;
+border: #ff7a59 solid 1px;
+background:#000000;
+transition: all 0.3s ease;
+cursor: grab;
 }
 
 .saved-container {
-  width: 30%;
+  width: 34%;
   height: auto;
   margin-left: 30px;
   border: 3px;
@@ -72,7 +97,7 @@ text {
 h3 {
   text-align: center;
   margin-top: 80px;
-  font-family: Comic Sans Ms;
+  font-family: Chalkduster, fantasy;
   font-size: 30px;
 }
 
@@ -84,7 +109,7 @@ h3 {
 
 button{
   background-color: #ffffff;
-  font-family: Comic Sans Ms;
+  font-family: Chalkduster, fantasy;;
   width: 120px;
   height: 30px;
   border-right: solid;
@@ -101,7 +126,7 @@ button{
 
 .saved-palettes{
   display:flex;
-  margin-left: 40px;
+  align-items: center;
   flex-direction: column;
 }
 
