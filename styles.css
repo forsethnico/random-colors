@@ -10,10 +10,10 @@ body {
   margin: 0px;
   margin-left: 30px;
   background-image: url(rainbowsplash-removebg-preview.png), url(backgroundimage.jpg);
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat;
   background-size: 400px, auto;
   background-position: bottom left, center;
-
+  font-family: Chalkduster, fantasy;
 }
 
 .random-colors {
@@ -27,7 +27,6 @@ body {
 h1 {
   text-align: center;
   margin-top: 50px;
-  font-family: Chalkduster, fantasy;
   background-size: 100%;
   font-weight: 100;
   font-size: 100px;
@@ -46,7 +45,7 @@ h1 {
 
 .box {
   background-color: #000000;
-  box-shadow: 4px 2px #888888;
+  box-shadow: 4px 3px #888888;
 }
 
 figure {
@@ -91,7 +90,6 @@ button:hover {
 h3 {
   text-align: center;
   margin-top: 80px;
-  font-family: Chalkduster, fantasy;
   font-size: 30px;
 }
 
