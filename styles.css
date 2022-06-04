@@ -11,9 +11,9 @@ body {
   margin-left: 30px;
   background-image: url(rainbowsplash-removebg-preview.png), url(backgroundimage.jpg);
   background-repeat: no-repeat, no-repeat;
-  background-attachment: ;
   background-size: 400px, auto;
   background-position: bottom left, center;
+
 }
 
 .random-colors {
@@ -85,6 +85,7 @@ button:hover {
   border: 3px;
   border-color: #000000;
   border-left-style: solid;
+  overflow: scroll;
 }
 
 h3 {
