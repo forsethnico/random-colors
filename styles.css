@@ -9,15 +9,15 @@ body {
   width: 100%;
   margin: 0px;
   margin-left: 30px;
-  /* background-image: url("backgroundimage.jpg"); */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background-image: url(rainbowsplash-removebg-preview.png), url(backgroundimage.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: ;
+  background-size: 400px, auto;
+  background-position: bottom left, center;
 }
 
 .random-colors {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 65%;
@@ -31,8 +31,6 @@ h1 {
   background-size: 100%;
   font-weight: 100;
   font-size: 100px;
-  /* text-shadow: 42px 6px 8px grey; */
-  /* color: linear-gradient(45deg, #f3ec78, #af4261); */
   background: -webkit-linear-gradient(right, red, orange, yellow, green, cyan, blue, violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -50,7 +48,6 @@ h1 {
   background-color: #000000;
   box-shadow: 4px 2px #888888;
 }
-
 
 figure {
   height: 150px;
@@ -71,18 +68,14 @@ text {
   justify-content: space-around;
   width: 50%;
   margin-top: 75px;
-
 }
-button:hover {
-/* color: #000000;
-border: #000000 solid 1px;
-background: #FFFFFF; */
 
-color: #ffffff;
-border: #ff7a59 solid 1px;
-background:#000000;
-transition: all 0.3s ease;
-cursor: grab;
+button:hover {
+  color: #ffffff;
+  border: #ff7a59 solid 1px;
+  background: #000000;
+  transition: all 0.3s ease;
+  cursor: grab;
 }
 
 .saved-container {
@@ -107,9 +100,9 @@ h3 {
   margin-top: 160px;
 }
 
-button{
+button {
   background-color: #ffffff;
-  font-family: Chalkduster, fantasy;;
+  font-family: Chalkduster, fantasy;
   width: 120px;
   height: 30px;
   border-right: solid;
@@ -124,8 +117,8 @@ button{
   margin-right: -10px;
 }
 
-.saved-palettes{
-  display:flex;
+.saved-palettes {
+  display: flex;
   align-items: center;
   flex-direction: column;
 }
