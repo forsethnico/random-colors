@@ -20,6 +20,7 @@
   ![Saved Palettes](assets/colorandom-savedpalettes.png)
 ## Features
 - Added a scroll feature to allow the user to save as many palettes as they wish in the Saved Palettes section.
+- Added a hover feature on the New and Save Palette buttons to change mouse cursor and background color of the button. 
 ## Deployed Page
 Visit our published ColoRandom site! [here](https://forsethnico.github.io/random-colors/)
 ## Possible Future Extensions
