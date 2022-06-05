@@ -17,6 +17,7 @@ Users can choose to save palettes they like and the palette will be moved to the
  ![Saved Palettes](assets/colorandom-savedpalettes.png)
  
 This project will give our team an opportunity to write HTML and CSS, and leverage JavaScript to both create our data model and interact with the DOM. To enhance the CSS features we added a hover feature on the New and Save Palette buttons to change mouse cursor and background color of the button, added two overlaid background images, used a rainbow gradient for the title, and added a vertical scroll feature in the Saved Palettes section to allow the user to save as many palettes as they wish! It will also give our team an opportunity to practice Git workflow in a collaborative nature since this is our first group project. 
+
 ## Contributors
 This website was built by a group of four front end engineering students with the [Turing School of Software and Design](https://turing.edu/). The following students are: 
   - [Colby Pearce](https://github.com/Crpearce)
