@@ -14,6 +14,7 @@ When you first visit the ColoRandom site you will be greeted with the title, a d
  ![Home Page](assets/colorandom-mainpage.png)
 
 Users can choose to save palettes they like and the palette will be moved to the "Saved Palettes" section on the right hand side of the page as a mini palette showing only the 5 colors. Users can also delete saved palettes they no longer want to keep by clicking the trash can icon next to the specified palette. 
+
  ![Saved Palettes](assets/colorandom-savedpalettes.png)
  
 This project will give our team an opportunity to write HTML and CSS, and leverage JavaScript to both create our data model and interact with the DOM. To enhance the CSS features we added a hover feature on the New and Save Palette buttons to change mouse cursor and background color of the button, added two overlaid background images, used a rainbow gradient for the title, and added a vertical scroll feature in the Saved Palettes section to allow the user to save as many palettes as they wish! It will also give our team an opportunity to practice Git workflow in a collaborative nature since this is our first group project. 
