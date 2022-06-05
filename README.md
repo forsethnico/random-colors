@@ -1,49 +1,36 @@
-## Table of Contents
-  - [Introduction](#introduction)
-  - [Technologies](#technologies)
-  - [Features](#features)
-  - [Illustrations](#illustrations)
-  - [Deployed Page](#deployed-page)
-  - [Possible Future Extensions](#possible-future-extensions)
-  - [Set Up](#set-up)
-  - [Organizational Resources](#organizational-resources)
-  - [Sources](#sources)
-  - [Contributors](#contributors)
+# ColoRandom
   
 ## Introduction
-  - We built a site that generates color palettes for us. Similar to other sites like Coolors, we present users with various random colors which they can choose to “save” (note: saved palettes will not persist across page refreshes) and be added to the Saved Palettes section to the right side of the page showing only the 5 palette colors. Users can also “lock” a color by clicking the lock/unlock icon next to the hex code for the color, which will keep that color when a new palette is generated. Users can also delete saved palettes they no longer wish to keep by clicking the trash can icon next to the specified palette. This project will give our team an opportunity to write HTML and CSS, and leverage JavaScript to both create our data model and interact with the DOM. It will also give our team an opportunity to practice Git workflow in a collaborative nature since this is our first group project. 
-## Technologies
-  - Javascript
-  - HTML
-  - CSS
-## Illustrations
-  ![Saved Palettes](assets/colorandom-savedpalettes.png)
+  - ColoRandom is a site that generates color palettes using random hex codes for us. Similar to other sites like [Coolors](https://coolors.co/), we present users with various random colors which they can choose to “save” (note: saved palettes will not persist across page refreshes).
+
+The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/colorandom-v2.html)
+
 ## Features
-- Added a scroll feature to allow the user to save as many palettes as they wish in the Saved Palettes section.
-- Added a hover feature on the New and Save Palette buttons to change mouse cursor and background color of the button. 
+When you first visit the ColoRandom site you will be greeted with the title, a displayed palette of five colors that is generated at random using a combination of 16 letters and numbers that make up hex codes (A, B, C, D, E, F, 0-9), and then the hex code and lock symbol are displayed below the corresponding color. Users can also choose to “lock” a color by clicking the lock/unlock icon next to the hex code for a specific color, which will keep that color(s) 'locked' as a new palette is generated.
+
+ ![Home Page](assets/colorandom-mainpage.png)
+
+Users can choose to save palettes they like and the palette will be moved to the Saved Palettes section on the right hand side of the page as a mini palette showing only the 5 colors. Users can also delete saved palettes they no longer want to keep by clicking the trash can icon next to the specified palette. This project will give our team an opportunity to write HTML and CSS, and leverage JavaScript to both create our data model and interact with the DOM. To enhance the CSS features we added a hover feature on the New and Save Palette buttons to change mouse cursor and background color of the button, added two overlayed background images, and added a vertical scroll feature in the Saved Palettes section to allow the user to save as many palettes as they wish! It will also give our team an opportunity to practice Git workflow in a collaborative nature since this is our first group project. 
+
+ ![Saved Palettes](assets/colorandom-savedpalettes.png)
+
 ## Deployed Page
 Visit our published ColoRandom site! [here](https://forsethnico.github.io/random-colors/)
-## Possible Future Extensions
-  - Ensure all saved palettes are unique and allow the user to add a name to each saved palette.
-  - Research hex codes to figure out how to programmatically generate random palettes that are cohesive and pleasant as currently it is generating colors completely at random. 
-## Set Up
-To begin, choose ONE TEAM MEMBER to do the following:
-Locally, create a new folder containing an empty index.html file, a blank scripts.js file, and an empty styles.css file.
-Run git init in your terminal (make sure your working directory is your project folder).
-Create an initial commit.
-On GitHub, create a new repository. Follow the written instructions on GitHub to add the repo’s remote to your local project, and push your initial commit up to GitHub.
-Add all project partners to the repository as contributors.
-If your repository is set to private, add your project manager as a collaborator as well.
-Then, as a team:
 
-Have all team members clone down the repo.
-
-## Sources
-  - [MDN](http://developer.mozilla.org/en-US/)
-  - [YouTube](https://www.youtube.com/)
-  - [W3Schools](https://www.w3schools.com/)
 ## Contributors
+This website was built by a group of four front end engineering students with the [Turing School of Software and Design](https://turing.edu/). The following students are: 
   - [Colby Pearce](https://github.com/Crpearce)
   - [Hunter Monroe](https://github.com/Hmonroe2)
   - [Nick Liggett](https://github.com/NickLiggett)
   - [Nicole Forseth](https://github.com/forsethnico)
+## Possible Future Extensions
+  - Ensure all saved palettes are unique and allow the user to add a name to each saved palette.
+  - Research hex codes to figure out how to programmatically generate random palettes that are cohesive and pleasant as currently it is generating colors completely at random. 
+## Technologies
+  - Javascript
+  - HTML
+  - CSS
+## Sources
+  - [MDN](http://developer.mozilla.org/en-US/)
+  - [YouTube](https://www.youtube.com/)
+  - [W3Schools](https://www.w3schools.com/)
