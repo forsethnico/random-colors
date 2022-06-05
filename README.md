@@ -1,7 +1,7 @@
 # ColoRandom
   
 ## Introduction
-  - ColoRandom is a site that generates color palettes using random hex codes for us. Similar to other sites like [Coolors](https://coolors.co/), we present users with various random colors which they can choose to “save” (note: saved palettes will not persist across page refreshes).
+ColoRandom is a site that generates color palettes using random hex codes for us. Similar to other sites like [Coolors](https://coolors.co/), we present users with various random colors which they can choose to “save” (note: saved palettes will not persist across page refreshes).
 
 The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/colorandom-v2.html)
 
