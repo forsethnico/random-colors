@@ -1,12 +1,9 @@
-var newPaletteBtn = document.querySelector('#new-palette-button');
-var savePaletteBtn = document.querySelector('#save-palette-button')
-var hexCode = document.querySelectorAll('#code')
+var newPaletteBtn = document.querySelector('#newPaletteBtn');
+var savePaletteBtn = document.querySelector('#savePaletteBtn')
+var hexCode = document.querySelectorAll('#hexCode')
 var boxes = document.querySelectorAll('.box')
-var lockIcon = document.querySelectorAll('.icon')
+var lockIcon = document.querySelectorAll('.lock-icon')
 var savedPaletteSection = document.querySelector(".saved-palettes")
-
-
-
 
 var currentPalette;
 var savedPalettes = [];
@@ -14,12 +11,12 @@ var savedPalettes = [];
 window.addEventListener('load', createPalette);
 newPaletteBtn.addEventListener('click', randomizePalette);
 savePaletteBtn.addEventListener('click', savePalette);
-
-
-
 lockIcon.forEach(function(img) {
   img.addEventListener('click', toggleLockIcon)
 })
+savedPaletteSection.addEventListener("click", function(event) {
+  deletePalette(event);
+});
 
 class Color {
   constructor() {
@@ -64,15 +61,13 @@ function randomizePalette() {
 }
 
 function savePalette() {
-  // if (savedPalettes.length < ) {
-    savedPalettes.push(currentPalette);
-    showSavedPalette()
-    createPalette();
-    for (var i = 0; i < 5; i++) {
-      lockIcon[i].src = 'https://cdn-icons-png.flaticon.com/512/102/102288.png'
-    }
+  savedPalettes.push(currentPalette);
+  showSavedPalette()
+  createPalette();
+  for (var i = 0; i < 5; i++) {
+    lockIcon[i].src = "assets/unlocked.png"
   }
-
+}
 
 function showPalette() {
   for (var i = 0; i < currentPalette.colors.length; i++) {
@@ -81,27 +76,17 @@ function showPalette() {
   }
 }
 
-
-
-
 function toggleLockIcon(event) {
-  if (event.target.src === 'https://cdn-icons-png.flaticon.com/512/102/102288.png') {
-    event.target.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/OOjs_UI_icon_lock.svg/768px-OOjs_UI_icon_lock.svg.png'
-    var targetHex = event.target.closest('figure').innerText
-    for (var i = 0; i < 5; i++) {
-      if (currentPalette.colors[i].hexCode === targetHex) {
-        currentPalette.colors[i].locked = true
+  var lockImage = "assets/locked.png"
+  var unlockImage = "assets/unlocked.png"
+  var targetColorIndex = parseInt(event.target.getAttribute("data-color-index"))
+      if (currentPalette.colors[targetColorIndex].locked === false) {
+        event.target.src = lockImage
+        currentPalette.colors[targetColorIndex].locked = true;
+      } else {
+        event.target.src = unlockImage;
+        currentPalette.colors[targetColorIndex].locked = false;
       }
-    }
-  } else {
-    event.target.src = 'https://cdn-icons-png.flaticon.com/512/102/102288.png'
-    var targetHex = event.target.closest('figure').innerText
-    for (var i = 0; i < 5; i++) {
-      if (currentPalette.colors[i].hexCode === targetHex) {
-        currentPalette.colors[i].locked = false
-      }
-    }
-  }
 }
 
 function showSavedPalette() {
@@ -112,15 +97,11 @@ function showSavedPalette() {
     <figure class="mini-box" style="background-color: ${currentPalette.colors[2].hexCode}"></figure>
     <figure class="mini-box" style="background-color: ${currentPalette.colors[3].hexCode}"></figure>
     <figure class="mini-box" style="background-color: ${currentPalette.colors[4].hexCode}"></figure>
-    <img class="trash-can" src = "./assets/trash-can.png"></img></section>`
+    <img class="trash-can" src = "assets/trash-can.png"></img></section>`
 }
-
 
 function deletePalette(event) {
   if (event.target.classList.contains("trash-can")) {
     event.target.closest("section").remove();
   }
 }
-savedPaletteSection.addEventListener("click", function(event) {
-  deletePalette(event);
-});
