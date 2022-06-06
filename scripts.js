@@ -1,43 +1,43 @@
-var newPaletteBtn = document.querySelector('#newPaletteBtn');
+var newPaletteBtn = document.querySelector('#newPaletteBtn')
 var savePaletteBtn = document.querySelector('#savePaletteBtn')
 var hexCode = document.querySelectorAll('#hexCode')
 var boxes = document.querySelectorAll('.box')
 var lockIcon = document.querySelectorAll('.lock-icon')
 var savedPaletteSection = document.querySelector(".saved-palettes")
 
-var currentPalette;
-var savedPalettes = [];
+var currentPalette
+var savedPalettes = []
 
-window.addEventListener('load', createPalette);
-newPaletteBtn.addEventListener('click', randomizePalette);
-savePaletteBtn.addEventListener('click', savePalette);
+window.addEventListener('load', createPalette)
+newPaletteBtn.addEventListener('click', randomizePalette)
+savePaletteBtn.addEventListener('click', savePalette)
 lockIcon.forEach(function(img) {
   img.addEventListener('click', toggleLockIcon)
 })
 savedPaletteSection.addEventListener("click", function(event) {
-  deletePalette(event);
+  deletePalette(event)
 });
 
 class Color {
   constructor() {
-    this.locked = false;
-    this.hexCode = '';
-    this.randomColor();
+    this.locked = false
+    this.hexCode = ''
+    this.randomColor()
   }
   randomColor() {
-    var hexValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
-    var hex = '#';
+    var hexValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
+    var hex = '#'
     for (var i = 0; i < 6; i++) {
-      hex += hexValues[(Math.floor(Math.random() * hexValues.length))];
+      hex += hexValues[(Math.floor(Math.random() * hexValues.length))]
     }
-    this.hexCode = hex;
+    this.hexCode = hex
   }
 }
 
 class Palette {
   constructor() {
-    this.id = Date.now();
-    this.colors = [];
+    this.id = Date.now()
+    this.colors = []
     for (var i = 0; i < 5; i++) {
       this.colors.push(new Color())
     }
@@ -45,25 +45,25 @@ class Palette {
   randomizeColors() {
     for (var i = 0; i < this.colors.length; i++) {
       if (this.colors[i].locked === false)
-        this.colors[i].randomColor();
+        this.colors[i].randomColor()
     }
   }
 }
 
 function createPalette() {
-  currentPalette = new Palette();
-  showPalette();
+  currentPalette = new Palette()
+  showPalette()
 }
 
 function randomizePalette() {
-  currentPalette.randomizeColors();
-  showPalette();
+  currentPalette.randomizeColors()
+  showPalette()
 }
 
 function savePalette() {
-  savedPalettes.push(currentPalette);
+  savedPalettes.push(currentPalette)
   showSavedPalette()
-  createPalette();
+  createPalette()
   for (var i = 0; i < 5; i++) {
     lockIcon[i].src = "assets/unlocked.png"
   }
@@ -82,10 +82,10 @@ function toggleLockIcon(event) {
   var targetColorIndex = parseInt(event.target.getAttribute("data-color-index"))
       if (currentPalette.colors[targetColorIndex].locked === false) {
         event.target.src = lockImage
-        currentPalette.colors[targetColorIndex].locked = true;
+        currentPalette.colors[targetColorIndex].locked = true
       } else {
         event.target.src = unlockImage;
-        currentPalette.colors[targetColorIndex].locked = false;
+        currentPalette.colors[targetColorIndex].locked = false
       }
 }
 
@@ -102,6 +102,6 @@ function showSavedPalette() {
 
 function deletePalette(event) {
   if (event.target.classList.contains("trash-can")) {
-    event.target.closest("section").remove();
+    event.target.closest("section").remove()
   }
 }
