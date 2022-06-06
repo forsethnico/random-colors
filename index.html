@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <section class="random-colors">
-    <h1>COLORANDOM</h1>
-    <section class="color-boxes">
-      <figure class="box"><text id="hexCode"></text><img class="lock-icon" data-color-index="0" src="assets/unlocked.png" alt="unlock"></figure>
-      <figure class="box"><text id="hexCode"></text><img class="lock-icon" data-color-index="1" src="assets/unlocked.png" alt="unlock"></figure>
-      <figure class="box"><text id="hexCode"></text><img class="lock-icon" data-color-index="2" src="assets/unlocked.png" alt="unlock"></figure>
-      <figure class="box"><text id="hexCode"></text><img class="lock-icon" data-color-index="3" src="assets/unlocked.png" alt="unlock"></figure>
-      <figure class="box"><text id="hexCode"></text><img class="lock-icon" data-color-index="4" src="assets/unlocked.png" alt="unlock"></figure>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <section class="random-colors">
+      <h1>COLORANDOM</h1>
+      <section class="color-boxes">
+        <figure class="box">
+          <text id="hexCode"></text>
+          <img class="lock-icon" data-color-index="0" src="assets/unlocked.png"
+          alt="unlock">
+        </figure>
+        <figure class="box">
+          <text id="hexCode"></text>
+          <img class="lock-icon" data-color-index="1" src="assets/unlocked.png"
+          alt="unlock">
+        </figure>
+        <figure class="box">
+          <text id="hexCode"></text>
+          <img class="lock-icon" data-color-index="2" src="assets/unlocked.png"
+          alt="unlock">
+        </figure>
+        <figure class="box">
+          <text id="hexCode"></text>
+          <img class="lock-icon" data-color-index="3" src="assets/unlocked.png"
+          alt="unlock">
+        </figure>
+        <figure class="box">
+          <text id="hexCode"></text>
+          <img class="lock-icon" data-color-index="4" src="assets/unlocked.png"
+          alt="unlock">
+        </figure>
+      </section>
+      <section class="buttons">
+        <button id="newPaletteBtn">New Palette</button>
+        <button id="savePaletteBtn">Save Palette</button>
+      </section>
     </section>
-    <section class="buttons">
-      <button id="newPaletteBtn">New Palette</button>
-      <button id="savePaletteBtn">Save Palette</button>
-    </section>
-  </section>
-  <aside class="saved-container">
-    <h3>Saved Palettes</h3>
-    <section class="saved-palettes"> </section>
-  </aside>
-</body>
-<script src="./scripts.js"></script>
-
+    <aside class="saved-container">
+      <h3>Saved Palettes</h3>
+      <section class="saved-palettes"></section>
+    </aside>
+    <script src="scripts.js"></script>
+  </body>
 </html>
