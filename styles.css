@@ -35,7 +35,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.color-boxes {
+.palette-boxes {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@ h1 {
   height: 300px;
 }
 
-.box {
+.color-box {
   background-color: #000000;
   box-shadow: 4px 3px #888888;
 }
@@ -110,7 +110,7 @@ button {
   font-size: 14px;
 }
 
-.mini-box {
+.mini-color-box {
   height: 60px;
   width: 60px;
   margin-right: -10px;

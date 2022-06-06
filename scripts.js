@@ -1,9 +1,9 @@
 var newPaletteBtn = document.querySelector('#newPaletteBtn')
 var savePaletteBtn = document.querySelector('#savePaletteBtn')
 var hexCode = document.querySelectorAll('#hexCode')
-var boxes = document.querySelectorAll('.box')
+var colorBoxes = document.querySelectorAll('.color-box')
 var lockIcon = document.querySelectorAll('.lock-icon')
-var savedPaletteSection = document.querySelector(".saved-palettes")
+var savedPaletteSection = document.querySelector('.saved-palettes')
 
 var currentPalette
 var savedPalettes = []
@@ -14,7 +14,7 @@ savePaletteBtn.addEventListener('click', savePalette)
 lockIcon.forEach(function(img) {
   img.addEventListener('click', toggleLockIcon)
 })
-savedPaletteSection.addEventListener("click", function(event) {
+savedPaletteSection.addEventListener('click', function(event) {
   deletePalette(event)
 });
 
@@ -72,7 +72,7 @@ function savePalette() {
 function showPalette() {
   for (var i = 0; i < currentPalette.colors.length; i++) {
     hexCode[i].innerText = currentPalette.colors[i].hexCode
-    boxes[i].style.backgroundColor = currentPalette.colors[i].hexCode
+    colorBoxes[i].style.backgroundColor = currentPalette.colors[i].hexCode
   }
 }
 
@@ -92,12 +92,13 @@ function toggleLockIcon(event) {
 function showSavedPalette() {
   savedPaletteSection.innerHTML +=
     `<section class="saved-row">
-    <figure class="mini-box" style="background-color: ${currentPalette.colors[0].hexCode}"></figure>
-    <figure class="mini-box" style="background-color: ${currentPalette.colors[1].hexCode}"></figure>
-    <figure class="mini-box" style="background-color: ${currentPalette.colors[2].hexCode}"></figure>
-    <figure class="mini-box" style="background-color: ${currentPalette.colors[3].hexCode}"></figure>
-    <figure class="mini-box" style="background-color: ${currentPalette.colors[4].hexCode}"></figure>
-    <img class="trash-can" src = "assets/trash-can.png"></img></section>`
+    <figure class="mini-color-box" style="background-color: ${currentPalette.colors[0].hexCode}"></figure>
+    <figure class="mini-color-box" style="background-color: ${currentPalette.colors[1].hexCode}"></figure>
+    <figure class="mini-color-box" style="background-color: ${currentPalette.colors[2].hexCode}"></figure>
+    <figure class="mini-color-box" style="background-color: ${currentPalette.colors[3].hexCode}"></figure>
+    <figure class="mini-color-box" style="background-color: ${currentPalette.colors[4].hexCode}"></figure>
+    <img class="trash-can" src = "assets/trash-can.png"></img>
+    </section>`
 }
 
 function deletePalette(event) {
